@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/postcss':
-    specifier: ^4
-    version: 4.0.0
+    specifier: ^4.1.17
+    version: 4.1.17
   '@types/node':
     specifier: ^20
     version: 20.0.0
@@ -35,8 +35,8 @@ devDependencies:
     specifier: 16.0.3
     version: 16.0.3(@typescript-eslint/parser@8.46.4)(eslint@9.0.0)(typescript@5.0.2)
   tailwindcss:
-    specifier: ^4
-    version: 4.0.0
+    specifier: ^4.1.17
+    version: 4.1.17
   typescript:
     specifier: ^5
     version: 5.0.2
@@ -797,15 +797,14 @@ packages:
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.17
     dev: true
 
-  /@tailwindcss/postcss@4.0.0:
-    resolution: {integrity: sha512-lI2bPk4TvwavHdehjr5WiC6HnZ59hacM6ySEo4RM/H7tsjWd8JpqiNW9ThH7rO/yKtrn4mGBoXshpvn8clXjPg==}
+  /@tailwindcss/postcss@4.1.17:
+    resolution: {integrity: sha512-+nKl9N9mN5uJ+M7dBOOCzINw94MPstNR/GtIhz1fpZysxL/4a+No64jCBD6CPN+bIHWFx3KWuu8XJRrj/572Dw==}
     dependencies:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.1.17
       '@tailwindcss/oxide': 4.1.17
-      lightningcss: 1.30.2
       postcss: 8.5.6
-      tailwindcss: 4.0.0
+      tailwindcss: 4.1.17
     dev: true
 
   /@tybys/wasm-util@0.10.1:
@@ -3324,10 +3323,6 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-    dev: true
-
-  /tailwindcss@4.0.0:
-    resolution: {integrity: sha512-ULRPI3A+e39T7pSaf1xoi58AqqJxVCLg8F/uM5A3FadUbnyDTgltVnXJvdkTjwCOGA6NazqHVcwPJC5h2vRYVQ==}
     dev: true
 
   /tailwindcss@4.1.17:
