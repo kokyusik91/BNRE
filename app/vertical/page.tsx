@@ -1,31 +1,31 @@
-import HorizontalSlider from "./components/HorizontalSlider";
+import VerticalSlider from "../components/VerticalSlider";
 
-export default function Home() {
+export default function VerticalPage() {
   const slides = [
     {
       id: 1,
       backgroundColor: "#3b82f6", // blue-500
-      backgroundImage: "/image-1.jpg",
       content: (
         <div className="text-center">
           <h1 className="mb-4 text-6xl font-bold text-white md:text-8xl">
-            Welcome
+            Vertical Scroll
           </h1>
-          <p className="text-xl text-white/90 md:text-2xl">Scroll to explore</p>
+          <p className="text-xl text-white/90 md:text-2xl">
+            Scroll down to explore
+          </p>
         </div>
       ),
     },
     {
       id: 2,
       backgroundColor: "#8b5cf6", // violet-500
-      backgroundImage: "/image-2.jpg",
       content: (
         <div className="text-center">
           <h1 className="mb-4 text-6xl font-bold text-white md:text-8xl">
-            Our Story
+            Our Mission
           </h1>
           <p className="max-w-2xl text-xl text-white/90 md:text-2xl">
-            Creating amazing experiences with modern web technologies
+            Building the future with innovative solutions
           </p>
         </div>
       ),
@@ -33,30 +33,31 @@ export default function Home() {
     {
       id: 3,
       backgroundColor: "#ec4899", // pink-500
-      backgroundImage: "/image-3.jpg",
       content: (
         <div className="text-center">
           <h1 className="mb-4 text-6xl font-bold text-white md:text-8xl">
-            Our Quality
+            What We Offer
           </h1>
           <div className="mt-8 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
-              <h3 className="mb-2 text-2xl font-semibold text-white">Design</h3>
+              <h3 className="mb-2 text-2xl font-semibold text-white">
+                Innovation
+              </h3>
               <p className="text-white/80">
-                Beautiful and intuitive interfaces
+                Cutting-edge technology solutions
               </p>
             </div>
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="mb-2 text-2xl font-semibold text-white">
-                Development
+                Excellence
               </h3>
-              <p className="text-white/80">Robust and scalable solutions</p>
+              <p className="text-white/80">Premium quality in every detail</p>
             </div>
             <div className="rounded-lg bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="mb-2 text-2xl font-semibold text-white">
-                Support
+                Growth
               </h3>
-              <p className="text-white/80">24/7 dedicated assistance</p>
+              <p className="text-white/80">Continuous improvement and scaling</p>
             </div>
           </div>
         </div>
@@ -65,22 +66,21 @@ export default function Home() {
     {
       id: 4,
       backgroundColor: "#f59e0b", // amber-500
-      backgroundImage: "/image-4.jpg",
       content: (
         <div className="text-center">
           <h1 className="mb-4 text-6xl font-bold text-white md:text-8xl">
-            Get Started
+            Join Us
           </h1>
           <p className="mb-8 text-xl text-white/90 md:text-2xl">
-            Ready to begin your journey?
+            Let's build something amazing together
           </p>
           <button className="rounded-full bg-white px-8 py-4 text-lg font-semibold text-amber-500 transition-transform hover:scale-105">
-            Contact Us
+            Get In Touch
           </button>
         </div>
       ),
     },
   ];
 
-  return <HorizontalSlider slides={slides} />;
+  return <VerticalSlider slides={slides} />;
 }
