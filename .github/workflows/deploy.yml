@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Pull & Deploy
         run: |
-          cd /Users/kks/projects/bnare
+          cd /Users/kks/projects/BNRE
           GIT_SSH_COMMAND="ssh -i /Users/kks/.ssh/id_kokyusik91 -o StrictHostKeyChecking=accept-new -o BatchMode=yes" /opt/homebrew/bin/git pull origin main
           /usr/local/bin/docker compose up -d --build --force-recreate
 
