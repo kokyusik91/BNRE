@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, macmini]
+    defaults:
+      run:
+        working-directory: /Users/kks/Desktop/projects/bnare
+
+    steps:
+      - name: Pull latest code
+        run: git pull origin main
+
+      - name: Build & Deploy
+        run: docker compose up -d --build --force-recreate
+
+      - name: Health Check
+        run: |
+          for i in 1 2 3 4 5; do
+            curl -f http://localhost:3100 && exit 0
+            sleep 5
+          done
+          exit 1
