@@ -7,21 +7,18 @@ on:
 jobs:
   deploy:
     runs-on: [self-hosted, macmini]
-    defaults:
-      run:
-        working-directory: /Users/kks/Desktop/projects/bnare
 
     steps:
-      - name: Pull latest code
-        run: git pull origin main
-
-      - name: Build & Deploy
-        run: docker compose up -d --build --force-recreate
+      - name: Pull & Deploy
+        run: |
+          cd /Users/kks/projects/bnare
+          GIT_SSH_COMMAND="ssh -i /Users/kks/.ssh/id_kokyusik91 -o StrictHostKeyChecking=accept-new -o BatchMode=yes" /opt/homebrew/bin/git pull origin main
+          /usr/local/bin/docker compose up -d --build --force-recreate
 
       - name: Health Check
         run: |
           for i in 1 2 3 4 5; do
-            curl -f http://localhost:3100 && exit 0
+            curl -sf -o /dev/null -w '%{http_code}' http://localhost:3100 | grep -q '200' && exit 0
             sleep 5
           done
           exit 1
